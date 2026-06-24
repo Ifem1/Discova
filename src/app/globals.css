@@ -1,0 +1,123 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Palette: #E0B4B2 #E99856 #A54055 #622347 #42164B #1A1836 */
+
+:root {
+  --background: #F8F5F3;
+  --foreground: #1A1836;
+  --card: #FFFFFF;
+  --card-foreground: #1A1836;
+  --muted: #F0EAEA;
+  --muted-foreground: #6B5E6B;
+  --border: #E0D4D2;
+  --input: #E0D4D2;
+  --ring: #A54055;
+
+  --primary: #A54055;
+  --primary-foreground: #FFFFFF;
+  --secondary: #622347;
+  --secondary-foreground: #FFFFFF;
+  --accent: #E99856;
+  --accent-foreground: #1A1836;
+  --destructive: #DC2626;
+  --destructive-foreground: #FFFFFF;
+
+  --rose: #E0B4B2;
+  --amber: #E99856;
+  --crimson: #A54055;
+  --plum: #622347;
+  --grape: #42164B;
+  --midnight: #1A1836;
+
+  --sidebar: #FDFBFA;
+  --sidebar-foreground: #1A1836;
+  --sidebar-border: #E0D4D2;
+}
+
+.dark {
+  --background: #0F0D1A;
+  --foreground: #EDE8E8;
+  --card: #1A1836;
+  --card-foreground: #EDE8E8;
+  --muted: #241E3A;
+  --muted-foreground: #B0A4B0;
+  --border: #342A50;
+  --input: #342A50;
+  --ring: #E99856;
+
+  --primary: #E99856;
+  --primary-foreground: #1A1836;
+  --secondary: #A54055;
+  --secondary-foreground: #FFFFFF;
+  --accent: #E0B4B2;
+  --accent-foreground: #1A1836;
+  --destructive: #EF4444;
+  --destructive-foreground: #FFFFFF;
+
+  --sidebar: #141126;
+  --sidebar-foreground: #EDE8E8;
+  --sidebar-border: #342A50;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-rose: var(--rose);
+  --color-amber: var(--amber);
+  --color-crimson: var(--crimson);
+  --color-plum: var(--plum);
+  --color-grape: var(--grape);
+  --color-midnight: var(--midnight);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+
+  --font-heading: 'Sora', 'Cabinet Grotesk', 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-body: 'General Sans', 'Switzer', 'Inter Tight', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted-foreground);
+}

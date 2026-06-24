@@ -11,6 +11,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
 import { Badge, verdictToBadgeVariant } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
 import { supabase } from '@/lib/supabase';
+import { WelcomeModal } from '@/components/ui/WelcomeModal';
 
 const container = { hidden: {}, show: { transition: { staggerChildren: 0.07 } } } as const;
 const item = { hidden: { opacity: 0, y: 18 }, show: { opacity: 1, y: 0 } } as const;
@@ -41,6 +42,7 @@ export default function DashboardPage() {
 
   return (
     <div className="p-6 lg:p-8 space-y-8">
+      <WelcomeModal />
       <motion.div
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}

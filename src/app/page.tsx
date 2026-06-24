@@ -7,7 +7,7 @@ import { useRef } from 'react';
 import {
   FlaskConical, Shield, Lightbulb, FileSearch,
   ArrowRight, Sparkles, Network, CheckCircle2,
-  Quote, Star, Users, BookOpen, Atom
+  Quote, Star, Users, BookOpen, Atom, Zap, Crown, Check
 } from 'lucide-react';
 import { AnimatedScoreBar } from '@/components/ui/AnimatedScoreBar';
 import { AnimatedCounter } from '@/components/ui/AnimatedCounter';
@@ -457,6 +457,78 @@ export default function LandingPage() {
                 </motion.div>
               </FadeInSection>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing */}
+      <section id="pricing" className="border-b border-border">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 sm:py-28">
+          <FadeInSection className="text-center max-w-2xl mx-auto mb-14">
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground">
+              Simple, transparent pricing
+            </h2>
+            <p className="mt-4 text-muted-foreground text-lg">
+              Start generating hypotheses for free. Upgrade when you need more.
+            </p>
+          </FadeInSection>
+
+          <div className="grid gap-6 sm:grid-cols-2 max-w-2xl mx-auto">
+            <FadeInSection>
+              <motion.div whileHover={{ y: -4 }} transition={{ duration: 0.2 }} className="rounded-2xl border border-border bg-card p-8 h-full flex flex-col">
+                <div className="flex items-center gap-2 mb-4">
+                  <div className="h-9 w-9 rounded-lg bg-primary/10 flex items-center justify-center">
+                    <Zap className="h-4 w-4 text-primary" />
+                  </div>
+                  <span className="text-lg font-bold text-foreground">Free</span>
+                </div>
+                <div className="mb-6">
+                  <span className="text-4xl font-bold text-foreground">8</span>
+                  <span className="text-muted-foreground ml-2">Gen / month</span>
+                </div>
+                <ul className="space-y-3 text-sm text-muted-foreground flex-1">
+                  {['8 hypothesis generations per month', 'Full 6-dimension consensus scoring', 'On-chain audit trail', 'Unlimited papers & laboratories', 'Human review workflow'].map((item) => (
+                    <li key={item} className="flex items-start gap-2">
+                      <Check className="h-4 w-4 text-emerald-500 shrink-0 mt-0.5" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+                <Link href="/auth/signup" className="mt-8 inline-flex items-center justify-center gap-2 rounded-lg border border-border bg-background px-6 py-3 text-sm font-semibold text-foreground hover:bg-muted transition-colors w-full">
+                  Get Started Free
+                </Link>
+              </motion.div>
+            </FadeInSection>
+
+            <FadeInSection delay={0.1}>
+              <motion.div whileHover={{ y: -4 }} transition={{ duration: 0.2 }} className="rounded-2xl border-2 border-primary/40 bg-primary/5 p-8 h-full flex flex-col relative">
+                <div className="absolute -top-3 right-6">
+                  <span className="text-xs font-bold uppercase bg-primary text-primary-foreground px-3 py-1 rounded-full">Popular</span>
+                </div>
+                <div className="flex items-center gap-2 mb-4">
+                  <div className="h-9 w-9 rounded-lg bg-primary/10 flex items-center justify-center">
+                    <Crown className="h-4 w-4 text-primary" />
+                  </div>
+                  <span className="text-lg font-bold text-foreground">Pro</span>
+                </div>
+                <div className="mb-6">
+                  <span className="text-4xl font-bold text-foreground">50</span>
+                  <span className="text-muted-foreground ml-2">Gen / month</span>
+                </div>
+                <ul className="space-y-3 text-sm text-muted-foreground flex-1">
+                  {['50 hypothesis generations per month', 'Priority consensus queue', 'Advanced analytics dashboard', 'Team collaboration & roles', 'API access for integrations'].map((item) => (
+                    <li key={item} className="flex items-start gap-2">
+                      <Check className="h-4 w-4 text-emerald-500 shrink-0 mt-0.5" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+                <Link href="/auth/signup" className="mt-8 inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground hover:opacity-90 transition-opacity w-full shadow-lg shadow-primary/25">
+                  <Sparkles className="h-4 w-4" />
+                  Upgrade to Pro
+                </Link>
+              </motion.div>
+            </FadeInSection>
           </div>
         </div>
       </section>

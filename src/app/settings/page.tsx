@@ -235,14 +235,14 @@ export default function SettingsPage() {
                 <span className="font-semibold text-foreground">Free Plan</span>
                 <Badge variant="outline">Current</Badge>
               </div>
-              <p className="text-xs text-muted-foreground mt-1">5 hypothesis generations / month</p>
+              <p className="text-xs text-muted-foreground mt-1">8 hypothesis generations / month</p>
             </div>
             <Button size="sm" variant="secondary">Upgrade to Pro</Button>
           </div>
           <div className="space-y-2">
             <div className="flex justify-between text-sm">
               <span className="text-muted-foreground">Generations used</span>
-              <span className="font-semibold text-foreground">0 / 5</span>
+              <span className="font-semibold text-foreground">0 / 8</span>
             </div>
             <div className="h-2 rounded-full bg-muted">
               <div className="h-full rounded-full bg-primary w-0" />
